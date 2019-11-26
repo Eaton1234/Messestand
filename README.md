@@ -1,2 +1,0 @@
-# Messestand
-Industrial Automation
