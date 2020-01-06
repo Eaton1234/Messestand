@@ -22,12 +22,12 @@ function updateViz(data){
 	for(var i=1; i<4; i++) {
 		document.getElementById('tank' + i).style.height = data['level'+i] + 'px';
 		document.getElementById('tank' + i).style.top = 200 - data['level'+i] + 'px';
-		if(data['level' + i + 'Low'] == true){
+		if(data['level' + i + 'Low'] === true){
 			document.getElementById('tank' + i + 'Low').style.background = 'rgb(0,64,128)';
 		} else {
 			document.getElementById('tank' + i + 'Low').style.background = '#FFFFFF';
 		}
-		if(data['level' + i + 'High'] == true){
+		if(data['level' + i + 'High'] === true){
 			document.getElementById('tank' + i + 'High').style.background = 'rgb(0,64,128)';
 		} else {
 			document.getElementById('tank' + i + 'High').style.background = '#FFFFFF';
@@ -76,7 +76,7 @@ function toggleVisibility(){
 	var tankID = document.getElementById("tankSelector").value;
 	var tank = document.getElementById(tankID);
 	var button = document.getElementById('toggleButton');
-	if(tank.style.visibility == '' || tank.style.visibility == 'visible')
+	if(tank.style.visibility === '' || tank.style.visibility === 'visible')
 		tank.style.visibility = 'hidden';
 	else
 		tank.style.visibility = 'visible';
@@ -85,7 +85,7 @@ function toggleVisibility(){
 
 function setToggleButtonCaption(id){ 
 	var button = document.getElementById('toggleButton');
-	if(document.getElementById(id).style.visibility == 'hidden')
+	if(document.getElementById(id).style.visibility === 'hidden')
 		button.innerHTML = "Show";
 	else
 		button.innerHTML = "Hide";
